@@ -89,9 +89,6 @@ DATABASES = {
             'PASSWORD':'prakash123',
             'HOST':'cruddb.cnd9o2cggfg0.us-east-1.rds.amazonaws.com',
             'PORT':'3306',
-            'OPTIONS':{
-                'sql_mode':'traditional'
-            }
     }
 }
 
