@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '4fya_aqdx%84&f$^_9v%w!fj@u%!_(u)8+&(b3=ia$(^!$(*0k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['cruddb.cnd9o2cggfg0.us-east-1.rds.amazonaws.com']
 
 
 # Application definition
@@ -85,9 +85,9 @@ DATABASES = {
     'default':{
             'ENGINE': 'django.db.backends.mysql',
             'NAME':'cruddb',
-            'USER':'root',
-            'PASSWORD':'',
-            'HOST':'localhost',
+            'USER':'prakash',
+            'PASSWORD':'prakash123',
+            'HOST':'cruddb.cnd9o2cggfg0.us-east-1.rds.amazonaws.com',
             'PORT':'3306',
             'OPTIONS':{
                 'sql_mode':'traditional'
