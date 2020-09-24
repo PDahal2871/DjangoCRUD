@@ -26,7 +26,7 @@ SECRET_KEY = '4fya_aqdx%84&f$^_9v%w!fj@u%!_(u)8+&(b3=ia$(^!$(*0k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['cruddb.cnd9o2cggfg0.us-east-1.rds.amazonaws.com']
+ALLOWED_HOSTS = ['ec2-100-26-247-128.compute-1.amazonaws.com']
 
 
 # Application definition
