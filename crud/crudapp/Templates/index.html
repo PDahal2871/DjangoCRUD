@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD FOR AWS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+</head>
+<body>
+<img src="{% static 'bg.jpg' %}" height="500px" width="100%"/>
+    <form method="post" class="post-form" action="/std/">
+        {% csrf_token %}
+        <div class="container" style="background:skyblue">
+            <br>
+            {{error}}
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label"></label>
+                    <div class="col-sm-4">
+                        <h3 style="color: green">
+                            Enter Details
+                        </h3>
+                    </div>
+            </div>
+            <br>
+            <br>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"><b>Student ID : </b></label>
+                    <div class="col-sm-4">
+                        {{ form.sid }}
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"><b>First Name : </b></label>
+                    <div class="col-sm-4">
+                        {{ form.fname }}
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"><b>Last Name : </b></label>
+                    <div class="col-sm-4">
+                        {{ form.lname }}
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label"><b>Email : </b></label>
+                    <div class="col-sm-4">
+                        {{ form.email }}
+                    </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-1 col-form-label"></label>
+                    <div class="col-sm-4">
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

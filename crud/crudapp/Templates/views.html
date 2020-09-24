@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Views AWS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+    <style>
+
+        .table .thead-light th {
+
+          color: #401500;
+
+          background-color: skyblue;
+
+          border-color: #792700;
+
+        }
+
+</style>
+</head>
+<body>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr style="height:40px; margin-top:10px">
+                <th>Student ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr style="background:#FFDDA0">
+                <td style='width: 15%'>{{ student.sid}}</td>
+                <td style='width: 20%'>{{ student.fname}}</td>
+                <td style='width: 20%'>{{student.lname}}</td>
+                <td style='width: 25%'>{{student.email}}</td>
+                <td style='width: 20%'>
+                    <!--<a href="/edit/{{student.id}}"><span class="glyphicon glyphicon-pencil">Edit</span></a>
+                    <a href="/delete/{{student.id}}">Delete</a>-->
+                    <div style="display: flex;">
+                        <form action="/edit/{{student.id}}" method="post" style="margin-left: 30px">
+                            {% csrf_token %}
+                            <button class="btn btn-success">Edit</button>
+                        </form>
+                        <form onsubmit="return confirm('Are you sure?');" action="/delete/{{student.id}}" method="post" style="margin-left: 54px">
+                            {% csrf_token %}
+                            <button name="deleteuser"  class="btn btn-danger" value="User Deleted Successfully">Delete</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
