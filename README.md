@@ -9,4 +9,4 @@
 ====================================
 <br>
 <br>
-<img src="https://github.com/PDahal2871/DjangoCRUD/blob/master/Screenshot%20(176).png" width=750px height=190px>
+<img src="https://github.com/PDahal2871/DjangoCRUD/blob/master/Screenshot%20(176).png" width=750px height=150px>
