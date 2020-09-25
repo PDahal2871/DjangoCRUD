@@ -4,4 +4,5 @@
 
 ## Check <a href="http://ec2-34-202-229-236.compute-1.amazonaws.com/view/">here</a>
 
-<img
+<img src="https://github.com/PDahal2871/DjangoCRUD/blob/master/Screenshot%20(175).png" width=350px height=300px>
+
